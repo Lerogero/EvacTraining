@@ -37,9 +37,10 @@ var yAcceleration = 2.0;
 
 var myColladaLoader;
 var terrain;
-var ring;
+var arrow;
+var arrowTwo;
 
-var ringAnimations;
+var arrowAnimations;
 var keyFrameAnimations = [];
 var keyFrameAnimationsLength = 0;
 var lastFrameCurrentTime = [];
@@ -103,12 +104,12 @@ function initScene() {
   context.fillRect( 0 , 0, texture_placeholder.width, texture_placeholder.height );
 
   var materials = [
-    loadTexture( ' textures/cube/skybox/nx.png' ),
-    loadTexture( ' textures/cube/skybox/px.png' ),
-    loadTexture( ' textures/cube/skybox/py.png' ),
-    loadTexture( ' textures/cube/skybox/ny.png' ),
-    loadTexture( ' textures/cube/skybox/pz.png' ),
-    loadTexture( ' textures/cube/skybox/nz.png' )
+    loadTexture( ' textures/cube/skybox/Left.png' ),
+    loadTexture( ' textures/cube/skybox/Right.png' ),
+    loadTexture( ' textures/cube/skybox/Up.png' ),
+    loadTexture( ' textures/cube/skybox/Down.png' ),
+    loadTexture( ' textures/cube/skybox/Back.png' ),
+    loadTexture( ' textures/cube/skybox/Front.png' )
   ];
 
 skyBoxMesh = new THREE.Mesh( new THREE.BoxGeometry( 10000, 10000, 10000, 7, 7, 7), new THREE.MeshFaceMaterial( materials ));
@@ -116,28 +117,32 @@ skyBoxMesh.scale.x = - 1;
 scene.add(skyBoxMesh);
 
   // Add light
-  var light = new THREE.DirectionalLight( 0xffffff, 1.5 );
+  var light = new THREE.DirectionalLight( 0xffffff, 1.5, 1.5  );
   light.position.set( 1, 1, 1 );
   scene.add( light );
+
+  var light2 = new THREE.DirectionalLight( 0xffffff, 1.5, 1.5  );
+  light2.position.set( -1, -1, -1 );
+  scene.add( light2 );
 
   myColladaLoader = new THREE.ColladaLoader();
   myColladaLoader.options.convertUpAxis = true;
 
-  // Import ring model
-	myColladaLoader.load( 'ringanimated.DAE', function ( collada ) {
+  // Import arrow model
+	myColladaLoader.load( 'arrow.DAE', function ( collada ) {
 			// Here we store the dae in a global variable.
-			ring = collada.scene;
+			arrow = collada.scene;
 
-      ringAnimations = collada.animations;
+      arrowAnimations = collada.animations;
 
-      keyFrameAnimationsLength = ringAnimations.length;
+      keyFrameAnimationsLength = arrowAnimations.length;
 
       for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
         lastFrameCurrentTime[i];
       }
 
       for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-        var animation = ringAnimations[ i ];
+        var animation = arrowAnimations[ i ];
 
         var keyFrameAnimation = new THREE.KeyFrameAnimation( animation );
         keyFrameAnimation.timeScale = 1;
@@ -147,28 +152,66 @@ scene.add(skyBoxMesh);
       }
 
 			// Position your model in the scene (world space).objects
-      ring.position.set(-3,-1.5,20);
-      ring.rotation.y = 4.6;
+      arrow.position.set(-5,-2.5,20);
+      arrow.rotation.y = 4.6;
 			// Scale your model to the correct size.
-      ring.scale.x = ring.scale.y = ring.scale.z = 0.03;
-      ring.updateMatrix();
+      arrow.scale.x = arrow.scale.y = arrow.scale.z = 0.1;
+      arrow.updateMatrix();
 
 			// Add the model to the scene.
 
-      ring.name = "ring";
-			scene.add(ring);
-      objects.push(ring);
+      arrow.name = "arrow";
+			scene.add(arrow);
+      objects.push(arrow);
 
 		} );
 
+    // Import arrow model
+    myColladaLoader.load( 'arrow.DAE', function ( collada ) {
+        // Here we store the dae in a global variable.
+        arrowTwo = collada.scene;
+
+        arrowTwoAnimations = collada.animations;
+
+        keyFrameAnimationsLength = arrowTwoAnimations.length;
+
+        for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
+          lastFrameCurrentTime[i];
+        }
+
+        for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
+          var animation = arrowTwoAnimations[ i ];
+
+          var keyFrameAnimation = new THREE.KeyFrameAnimation( animation );
+          keyFrameAnimation.timeScale = 1;
+          keyFrameAnimation.loop = false;
+
+          keyFrameAnimations.push( keyFrameAnimation );
+        }
+
+        // Position your model in the scene (world space).objects
+        arrowTwo.position.set(-10,-2.5,20);
+        arrowTwo.rotation.y = 4.6;
+        // Scale your model to the correct size.
+        arrowTwo.scale.x = arrowTwo.scale.y = arrowTwo.scale.z = 0.1;
+        arrowTwo.updateMatrix();
+
+        // Add the model to the scene.
+
+        arrowTwo.name = "arrowTwo";
+        scene.add(arrowTwo);
+        objects.push(arrowTwo);
+
+      } );
+
     // Import terrain model
-    myColladaLoader.load( 'TerrainAza (2).DAE', function ( collada ) {
+    myColladaLoader.load( 'grant.DAE', function ( collada ) {
         // Here we store the dae in a global variable.
         terrain = collada.scene;
 
         // Position your model in the scene (world space).
         terrain.position.x = 0;
-        terrain.position.y = 14.5;
+        terrain.position.y = -5;
         terrain.position.z = 0;
 
         // Scale your model to the correct size.
@@ -242,9 +285,9 @@ function render() {
   camera.position.y = camera.position.y = yVelocity;
 
   //Debugger
-  document.getElementById("debugInfo").innerHTML =  "intersections.length = " + intersections.length +
-    "<br>" +"intersectionsF.length = " + intersectionsF.length +
-    "<br>" + "intersectionsB.length = " + intersectionsB.length;
+  document.getElementById("debugInfo").innerHTML =  "Gravity = " + intersections.length +
+    "<br>" +"Forward Collision = " + intersectionsF.length +
+    "<br>" + "Back Collision = " + intersectionsB.length;
 
     if ( intersections.length > 0) {
       if(camera.position.y < tmpY) {
@@ -256,54 +299,54 @@ function render() {
     var rotateAngle = Math.PI / 2 * deltaTime;
     var rotation_matrix = new THREE.Matrix4().identity();
 
-    // Check intersections with ring, then move.
+    // Check intersections with arrow, then move.
     if(intersectionsF.length > 0) {
       if( intersectionsF[0].object.parent.id == "node-Torus001") {
 
-        // Switch to move the ring around depnding on score
+        // Switch to move the arrow around depnding on score
         switch (score){
           case 0:
-          ring.position.set(-15, -2, 4); //sets the position of the ring after  a hit
+          arrow.position.set(-15, -2, 4); //sets the position of the arrow after  a hit
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 10:
-          ring.position.set(-24.5,-2 ,70);
+          arrow.position.set(-24.5,-2 ,70);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 20:
-		  ring.position.set(-45,-2 ,20);
+		  arrow.position.set(-45,-2 ,20);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 30:
-		    ring.position.set(20,-2, -17);
+		    arrow.position.set(20,-2, -17);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 40:
-		  ring.position.set(23,-2, 7);
+		  arrow.position.set(23,-2, 7);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 50:
-		  ring.position.set(45,-2, 15);
+		  arrow.position.set(45,-2, 15);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 60:
-		    ring.position.set(20,-2, 35);
+		    arrow.position.set(20,-2, 35);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 70:
-		  ring.position.set(40,-2, 51);
+		  arrow.position.set(40,-2, 51);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;
           case 80:
-		  ring.position.set(0,-2, 73);
+		  arrow.position.set(0,-2, 73);
             score = score + 10;
             document.getElementById("score").innerHTML = "Score: " + score;
             break;

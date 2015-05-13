@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>1226997</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///U:/Profile/Downloads/grantArrow.max</source_data>
+    </contributor>
+    <created>2015-05-13T15:08:33</created>
+    <modified>2015-05-13T15:08:33</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR5G54B179">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.01960784 0.2117647 0.7019608 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.01960784 0.2117647 0.7019608 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ColorEffectR6G135B6">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.02352941 0.5294118 0.02352941 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.02352941 0.5294118 0.02352941 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR5G54B179-material" name="ColorEffectR5G54B179-material">
+      <instance_effect url="#ColorEffectR5G54B179"/>
+    </material>
+    <material id="ColorEffectR6G135B6-material" name="ColorEffectR6G135B6-material">
+      <instance_effect url="#ColorEffectR6G135B6"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Box001" name="Box001">
+      <mesh>
+        <source id="geom-Box001-positions">
+          <float_array id="geom-Box001-positions-array" count="24">-6.016623 -30.0831 0 6.016623 -30.0831 0 -6.016623 30.0831 0 6.016623 30.0831 0 -6.016623 -30.0831 28.07758 6.016623 -30.0831 28.07758 -6.016623 30.0831 28.07758 6.016623 30.0831 28.07758</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-normals">
+          <float_array id="geom-Box001-normals-array" count="72">0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-map1">
+          <float_array id="geom-Box001-map1-array" count="72">1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Box001-vertices">
+          <input semantic="POSITION" source="#geom-Box001-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-Box001-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Box001-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Box001-map1" offset="2" set="0"/>
+          <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0 4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4 0 8 8 1 9 9 5 10 11 5 10 11 4 11 10 0 8 8 1 12 12 3 13 13 7 14 15 7 14 15 5 15 14 1 12 12 3 16 16 2 17 17 6 18 19 6 18 19 7 19 18 3 16 16 2 20 20 0 21 21 4 22 23 4 22 23 6 23 22 2 20 20</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-Box002" name="Box002">
+      <mesh>
+        <source id="geom-Box002-positions">
+          <float_array id="geom-Box002-positions-array" count="24">-13.50086 -4.678087 0 13.50086 -4.678087 0 -13.50086 4.678087 0 13.50086 4.678087 0 -13.50086 -4.678087 12.62673 13.50086 -4.678087 12.62673 -13.50086 4.678087 12.62673 13.50086 4.678087 12.62673</float_array>
+          <technique_common>
+            <accessor source="#geom-Box002-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box002-normals">
+          <float_array id="geom-Box002-normals-array" count="72">0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Box002-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box002-map1">
+          <float_array id="geom-Box002-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Box002-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Box002-vertices">
+          <input semantic="POSITION" source="#geom-Box002-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-Box002-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Box002-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Box002-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>1</generateuvs>
+            <height>12.62673</height>
+            <heightsegments>1</heightsegments>
+            <length>9.356175</length>
+            <lengthsegments>1</lengthsegments>
+            <width>27.00172</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_cameras>
+    <camera id="Camera001-camera" name="Camera001">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov>45</xfov>
+            <znear>1</znear>
+            <zfar>1000</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <target>#Camera001.Target</target>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Camera001" name="Camera001">
+        <matrix>-0.6722553 -0.2268394 -0.7047104 -29.0615 -0.7403194 0.2059841 0.6399201 59.0114 1.46218e-7 0.9519004 -0.3064074 2.729029 0 0 0 1</matrix>
+        <instance_camera url="#Camera001-camera"/>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Camera001.Target" name="Camera001.Target">
+        <translate>150.8452 -104.3548 80.9523</translate>
+        <rotate>-0.3369566 0.760952 0.5544478 -152.4118</rotate>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Arrow" name="Arrow">
+        <translate sid="translation">9.211679 11.80504 21.88018</translate>
+        <rotate sid="rotationZ">0 0 1 180</rotate>
+        <rotate sid="rotationY">0 1 0 5.799976</rotate>
+        <rotate sid="rotationX">1 0 0 180</rotate>
+        <rotate sid="InverseScaleAxisRotation">0 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <rotate sid="ScaleAxisRotation">0 0 0 0</rotate>
+        <node id="node-Box001" name="Box001">
+          <translate sid="translation">4.118815 -4.759485 -0.7420559</translate>
+          <rotate sid="rotationZ">0 0 1 0</rotate>
+          <rotate sid="rotationY">0 1 0 -87.28345</rotate>
+          <rotate sid="rotationX">1 0 0 0</rotate>
+          <rotate sid="InverseScaleAxisRotation">0 0 0 0</rotate>
+          <scale sid="scale">1 1 0.3233507</scale>
+          <rotate sid="ScaleAxisRotation">0 0 0 0</rotate>
+          <instance_geometry url="#geom-Box001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR6G135B6-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-Box002" name="Box002">
+          <translate sid="translation">6.824095 25.72369 10.61436</translate>
+          <rotate sid="rotationZ">0 0 1 -82.69583</rotate>
+          <rotate sid="rotationY">0 1 0 -69.53403</rotate>
+          <rotate sid="rotationX">1 0 0 82.2096</rotate>
+          <rotate sid="InverseScaleAxisRotation">0.1014098 -0.3869633 -0.9165018 -5.790251</rotate>
+          <scale sid="scale">0.9999998 1 0.9999999</scale>
+          <rotate sid="ScaleAxisRotation">0.1014098 -0.3869633 -0.9165018 5.790251</rotate>
+          <instance_geometry url="#geom-Box002">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR6G135B6-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-Box003" name="Box003">
+          <translate sid="translation">5.787826 25.48166 -11.22571</translate>
+          <rotate sid="rotationZ">0 0 1 83.2487</rotate>
+          <rotate sid="rotationY">0 1 0 -68.02062</rotate>
+          <rotate sid="rotationX">1 0 0 -82.725</rotate>
+          <rotate sid="InverseScaleAxisRotation">0.02334026 0 0.9997276 -3.565407</rotate>
+          <scale sid="scale">0.9999999 0.9999996 0.9999999</scale>
+          <rotate sid="ScaleAxisRotation">0.02334026 0 0.9997276 3.565407</rotate>
+          <instance_geometry url="#geom-Box002">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR6G135B6-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations>
+    <animation>
+      <source id="node-Arrow_translation.X-input">
+        <float_array id="node-Arrow_translation.X-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.X-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.X-output">
+        <float_array id="node-Arrow_translation.X-output-array" count="5">9.211679 9.211679 9.211679 9.211679 9.211679</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.X-output-array" count="5" stride="1">
+            <param name="X" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.X-intangent">
+        <float_array id="node-Arrow_translation.X-intangent-array" count="10">-0.3663333 9.211679 0.5447333 9.211679 1.389167 9.211679 2.2225 9.211679 3.055833 9.211679</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.X-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.X-outtangent">
+        <float_array id="node-Arrow_translation.X-outtangent-array" count="10">0.2552667 9.211679 1.110833 9.211679 1.944167 9.211679 2.7775 9.211679 3.666333 9.211679</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.X-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.X-interpolation">
+        <Name_array id="node-Arrow_translation.X-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.X-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Y-input">
+        <float_array id="node-Arrow_translation.Y-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Y-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Y-output">
+        <float_array id="node-Arrow_translation.Y-output-array" count="5">11.80504 11.80504 11.80504 11.80504 11.80504</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Y-output-array" count="5" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Y-intangent">
+        <float_array id="node-Arrow_translation.Y-intangent-array" count="10">-0.3663333 11.80504 0.5447333 11.80504 1.389167 11.80504 2.2225 11.80504 3.055833 11.80504</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Y-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Y-outtangent">
+        <float_array id="node-Arrow_translation.Y-outtangent-array" count="10">0.2552667 11.80504 1.110833 11.80504 1.944167 11.80504 2.7775 11.80504 3.666333 11.80504</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Y-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Y-interpolation">
+        <Name_array id="node-Arrow_translation.Y-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Y-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Z-input">
+        <float_array id="node-Arrow_translation.Z-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Z-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Z-output">
+        <float_array id="node-Arrow_translation.Z-output-array" count="5">21.88018 21.88018 21.88018 21.88018 21.88018</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Z-output-array" count="5" stride="1">
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Z-intangent">
+        <float_array id="node-Arrow_translation.Z-intangent-array" count="10">-0.3663333 21.88018 0.5447333 21.88018 1.389167 21.88018 2.2225 21.88018 3.055833 21.88018</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Z-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Z-outtangent">
+        <float_array id="node-Arrow_translation.Z-outtangent-array" count="10">0.2552667 21.88018 1.110833 21.88018 1.944167 21.88018 2.7775 21.88018 3.666333 21.88018</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Z-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_translation.Z-interpolation">
+        <Name_array id="node-Arrow_translation.Z-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_translation.Z-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationZ.ANGLE-input">
+        <float_array id="node-Arrow_rotationZ.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationZ.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationZ.ANGLE-output">
+        <float_array id="node-Arrow_rotationZ.ANGLE-output-array" count="5">0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationZ.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationZ.ANGLE-intangent">
+        <float_array id="node-Arrow_rotationZ.ANGLE-intangent-array" count="10">-0.3663333 0 0.5447333 0 1.389167 0 2.2225 0 3.055833 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationZ.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationZ.ANGLE-outtangent">
+        <float_array id="node-Arrow_rotationZ.ANGLE-outtangent-array" count="10">0.2552667 0 1.110833 0 1.944167 0 2.7775 0 3.666333 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationZ.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Arrow_rotationZ.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationZ.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationY.ANGLE-input">
+        <float_array id="node-Arrow_rotationY.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationY.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationY.ANGLE-output">
+        <float_array id="node-Arrow_rotationY.ANGLE-output-array" count="5">533.9581 619.7369 711.9166 799.3017 888.7212</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationY.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationY.ANGLE-intangent">
+        <float_array id="node-Arrow_rotationY.ANGLE-intangent-array" count="10">-0.3663333 533.9581 0.5447333 589.5258 1.389167 682.0191 2.2225 769.8638 3.055833 888.7212</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationY.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationY.ANGLE-outtangent">
+        <float_array id="node-Arrow_rotationY.ANGLE-outtangent-array" count="10">0.2552667 533.9581 1.110833 648.786 1.944167 741.8142 2.7775 828.7396 3.666333 888.7212</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationY.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Arrow_rotationY.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationY.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationX.ANGLE-input">
+        <float_array id="node-Arrow_rotationX.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationX.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationX.ANGLE-output">
+        <float_array id="node-Arrow_rotationX.ANGLE-output-array" count="5">0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationX.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationX.ANGLE-intangent">
+        <float_array id="node-Arrow_rotationX.ANGLE-intangent-array" count="10">-0.3663333 0 0.5447333 0 1.389167 0 2.2225 0 3.055833 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationX.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationX.ANGLE-outtangent">
+        <float_array id="node-Arrow_rotationX.ANGLE-outtangent-array" count="10">0.2552667 0 1.110833 0 1.944167 0 2.7775 0 3.666333 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationX.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Arrow_rotationX.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_rotationX.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_scale-input">
+        <float_array id="node-Arrow_scale-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_scale-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_scale-output">
+        <float_array id="node-Arrow_scale-output-array" count="15">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_scale-output-array" count="5" stride="3">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_scale-intangent">
+        <float_array id="node-Arrow_scale-intangent-array" count="30">-0.3663333 1 -0.3663333 1 -0.3663333 1 0.5447333 1 0.5447333 1 0.5447333 1 1.389167 1 1.389167 1 1.389167 1 2.2225 1 2.2225 1 2.2225 1 3.055833 1 3.055833 1 3.055833 1</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_scale-intangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_scale-outtangent">
+        <float_array id="node-Arrow_scale-outtangent-array" count="30">0.2552667 1 0.2552667 1 0.2552667 1 1.110833 1 1.110833 1 1.110833 1 1.944167 1 1.944167 1 1.944167 1 2.7775 1 2.7775 1 2.7775 1 3.666333 1 3.666333 1 3.666333 1</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_scale-outtangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_scale-interpolation">
+        <Name_array id="node-Arrow_scale-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_scale-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_InverseScaleAxisRotation-input">
+        <float_array id="node-Arrow_InverseScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_InverseScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_InverseScaleAxisRotation-output">
+        <float_array id="node-Arrow_InverseScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_InverseScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_InverseScaleAxisRotation-interpolation">
+        <Name_array id="node-Arrow_InverseScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_InverseScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_ScaleAxisRotation-input">
+        <float_array id="node-Arrow_ScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_ScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_ScaleAxisRotation-output">
+        <float_array id="node-Arrow_ScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Arrow_ScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Arrow_ScaleAxisRotation-interpolation">
+        <Name_array id="node-Arrow_ScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Arrow_ScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.X-input">
+        <float_array id="node-Box001_translation.X-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.X-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.X-output">
+        <float_array id="node-Box001_translation.X-output-array" count="5">4.118816 4.118816 4.118816 4.118816 4.118816</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.X-output-array" count="5" stride="1">
+            <param name="X" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.X-intangent">
+        <float_array id="node-Box001_translation.X-intangent-array" count="10">-0.3663333 4.118816 0.5447333 4.118816 1.389167 4.118816 2.2225 4.118816 3.055833 4.118816</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.X-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.X-outtangent">
+        <float_array id="node-Box001_translation.X-outtangent-array" count="10">0.2552667 4.118816 1.110833 4.118816 1.944167 4.118816 2.7775 4.118816 3.666333 4.118816</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.X-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.X-interpolation">
+        <Name_array id="node-Box001_translation.X-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.X-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Y-input">
+        <float_array id="node-Box001_translation.Y-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Y-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Y-output">
+        <float_array id="node-Box001_translation.Y-output-array" count="5">-4.759485 -4.759485 -4.759485 -4.759485 -4.759485</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Y-output-array" count="5" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Y-intangent">
+        <float_array id="node-Box001_translation.Y-intangent-array" count="10">-0.3663333 -4.759485 0.5447333 -4.759485 1.389167 -4.759485 2.2225 -4.759485 3.055833 -4.759485</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Y-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Y-outtangent">
+        <float_array id="node-Box001_translation.Y-outtangent-array" count="10">0.2552667 -4.759485 1.110833 -4.759485 1.944167 -4.759485 2.7775 -4.759485 3.666333 -4.759485</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Y-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Y-interpolation">
+        <Name_array id="node-Box001_translation.Y-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Y-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Z-input">
+        <float_array id="node-Box001_translation.Z-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Z-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Z-output">
+        <float_array id="node-Box001_translation.Z-output-array" count="5">-0.742054 -0.742054 -0.742054 -0.742054 -0.742054</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Z-output-array" count="5" stride="1">
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Z-intangent">
+        <float_array id="node-Box001_translation.Z-intangent-array" count="10">-0.3663333 -0.742054 0.5447333 -0.742054 1.389167 -0.742054 2.2225 -0.742054 3.055833 -0.742054</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Z-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Z-outtangent">
+        <float_array id="node-Box001_translation.Z-outtangent-array" count="10">0.2552667 -0.742054 1.110833 -0.742054 1.944167 -0.742054 2.7775 -0.742054 3.666333 -0.742054</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Z-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_translation.Z-interpolation">
+        <Name_array id="node-Box001_translation.Z-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_translation.Z-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationZ.ANGLE-input">
+        <float_array id="node-Box001_rotationZ.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationZ.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationZ.ANGLE-output">
+        <float_array id="node-Box001_rotationZ.ANGLE-output-array" count="5">0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationZ.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationZ.ANGLE-intangent">
+        <float_array id="node-Box001_rotationZ.ANGLE-intangent-array" count="10">-0.3663333 0 0.5447333 0 1.389167 0 2.2225 0 3.055833 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationZ.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationZ.ANGLE-outtangent">
+        <float_array id="node-Box001_rotationZ.ANGLE-outtangent-array" count="10">0.2552667 0 1.110833 0 1.944167 0 2.7775 0 3.666333 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationZ.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Box001_rotationZ.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationZ.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationY.ANGLE-input">
+        <float_array id="node-Box001_rotationY.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationY.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationY.ANGLE-output">
+        <float_array id="node-Box001_rotationY.ANGLE-output-array" count="5">-87.28345 -87.28345 -87.28345 -87.28345 -87.28345</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationY.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationY.ANGLE-intangent">
+        <float_array id="node-Box001_rotationY.ANGLE-intangent-array" count="10">-0.3663333 -87.28345 0.5447333 -87.28345 1.389167 -87.28345 2.2225 -87.28345 3.055833 -87.28345</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationY.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationY.ANGLE-outtangent">
+        <float_array id="node-Box001_rotationY.ANGLE-outtangent-array" count="10">0.2552667 -87.28345 1.110833 -87.28345 1.944167 -87.28345 2.7775 -87.28345 3.666333 -87.28345</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationY.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Box001_rotationY.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationY.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationX.ANGLE-input">
+        <float_array id="node-Box001_rotationX.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationX.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationX.ANGLE-output">
+        <float_array id="node-Box001_rotationX.ANGLE-output-array" count="5">0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationX.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationX.ANGLE-intangent">
+        <float_array id="node-Box001_rotationX.ANGLE-intangent-array" count="10">-0.3663333 0 0.5447333 0 1.389167 0 2.2225 0 3.055833 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationX.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationX.ANGLE-outtangent">
+        <float_array id="node-Box001_rotationX.ANGLE-outtangent-array" count="10">0.2552667 0 1.110833 0 1.944167 0 2.7775 0 3.666333 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationX.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Box001_rotationX.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_rotationX.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_scale-input">
+        <float_array id="node-Box001_scale-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_scale-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_scale-output">
+        <float_array id="node-Box001_scale-output-array" count="15">1 1 0.3233507 1 1 0.3233507 1 1 0.3233507 1 1 0.3233507 1 1 0.3233507</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_scale-output-array" count="5" stride="3">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_scale-intangent">
+        <float_array id="node-Box001_scale-intangent-array" count="30">-0.3663333 1 -0.3663333 1 -0.3663333 0.3233507 0.5447333 1 0.5447333 1 0.5447333 0.3233507 1.389167 1 1.389167 1 1.389167 0.3233507 2.2225 1 2.2225 1 2.2225 0.3233507 3.055833 1 3.055833 1 3.055833 0.3233507</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_scale-intangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_scale-outtangent">
+        <float_array id="node-Box001_scale-outtangent-array" count="30">0.2552667 1 0.2552667 1 0.2552667 0.3233507 1.110833 1 1.110833 1 1.110833 0.3233507 1.944167 1 1.944167 1 1.944167 0.3233507 2.7775 1 2.7775 1 2.7775 0.3233507 3.666333 1 3.666333 1 3.666333 0.3233507</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_scale-outtangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_scale-interpolation">
+        <Name_array id="node-Box001_scale-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_scale-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_InverseScaleAxisRotation-input">
+        <float_array id="node-Box001_InverseScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_InverseScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_InverseScaleAxisRotation-output">
+        <float_array id="node-Box001_InverseScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_InverseScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_InverseScaleAxisRotation-interpolation">
+        <Name_array id="node-Box001_InverseScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_InverseScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_ScaleAxisRotation-input">
+        <float_array id="node-Box001_ScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_ScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_ScaleAxisRotation-output">
+        <float_array id="node-Box001_ScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box001_ScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box001_ScaleAxisRotation-interpolation">
+        <Name_array id="node-Box001_ScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box001_ScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.X-input">
+        <float_array id="node-Box002_translation.X-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.X-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.X-output">
+        <float_array id="node-Box002_translation.X-output-array" count="5">6.824097 6.824097 6.824097 6.824097 6.824097</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.X-output-array" count="5" stride="1">
+            <param name="X" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.X-intangent">
+        <float_array id="node-Box002_translation.X-intangent-array" count="10">-0.3663333 6.824097 0.5447333 6.824097 1.389167 6.824097 2.2225 6.824097 3.055833 6.824097</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.X-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.X-outtangent">
+        <float_array id="node-Box002_translation.X-outtangent-array" count="10">0.2552667 6.824097 1.110833 6.824097 1.944167 6.824097 2.7775 6.824097 3.666333 6.824097</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.X-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.X-interpolation">
+        <Name_array id="node-Box002_translation.X-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.X-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Y-input">
+        <float_array id="node-Box002_translation.Y-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Y-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Y-output">
+        <float_array id="node-Box002_translation.Y-output-array" count="5">25.72369 25.72369 25.72369 25.72369 25.72369</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Y-output-array" count="5" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Y-intangent">
+        <float_array id="node-Box002_translation.Y-intangent-array" count="10">-0.3663333 25.72369 0.5447333 25.72369 1.389167 25.72369 2.2225 25.72369 3.055833 25.72369</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Y-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Y-outtangent">
+        <float_array id="node-Box002_translation.Y-outtangent-array" count="10">0.2552667 25.72369 1.110833 25.72369 1.944167 25.72369 2.7775 25.72369 3.666333 25.72369</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Y-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Y-interpolation">
+        <Name_array id="node-Box002_translation.Y-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Y-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Z-input">
+        <float_array id="node-Box002_translation.Z-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Z-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Z-output">
+        <float_array id="node-Box002_translation.Z-output-array" count="5">10.61436 10.61436 10.61436 10.61436 10.61436</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Z-output-array" count="5" stride="1">
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Z-intangent">
+        <float_array id="node-Box002_translation.Z-intangent-array" count="10">-0.3663333 10.61436 0.5447333 10.61436 1.389167 10.61436 2.2225 10.61436 3.055833 10.61436</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Z-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Z-outtangent">
+        <float_array id="node-Box002_translation.Z-outtangent-array" count="10">0.2552667 10.61436 1.110833 10.61436 1.944167 10.61436 2.7775 10.61436 3.666333 10.61436</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Z-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_translation.Z-interpolation">
+        <Name_array id="node-Box002_translation.Z-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_translation.Z-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationZ.ANGLE-input">
+        <float_array id="node-Box002_rotationZ.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationZ.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationZ.ANGLE-output">
+        <float_array id="node-Box002_rotationZ.ANGLE-output-array" count="5">-82.69583 -82.69583 -82.69583 -82.69583 -82.69583</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationZ.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationZ.ANGLE-intangent">
+        <float_array id="node-Box002_rotationZ.ANGLE-intangent-array" count="10">-0.3663333 -82.69583 0.5447333 -82.69583 1.389167 -82.69583 2.2225 -82.69583 3.055833 -82.69583</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationZ.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationZ.ANGLE-outtangent">
+        <float_array id="node-Box002_rotationZ.ANGLE-outtangent-array" count="10">0.2552667 -82.69583 1.110833 -82.69583 1.944167 -82.69583 2.7775 -82.69583 3.666333 -82.69583</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationZ.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Box002_rotationZ.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationZ.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationY.ANGLE-input">
+        <float_array id="node-Box002_rotationY.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationY.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationY.ANGLE-output">
+        <float_array id="node-Box002_rotationY.ANGLE-output-array" count="5">-69.53403 -69.53403 -69.53403 -69.53403 -69.53403</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationY.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationY.ANGLE-intangent">
+        <float_array id="node-Box002_rotationY.ANGLE-intangent-array" count="10">-0.3663333 -69.53403 0.5447333 -69.53403 1.389167 -69.53403 2.2225 -69.53403 3.055833 -69.53403</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationY.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationY.ANGLE-outtangent">
+        <float_array id="node-Box002_rotationY.ANGLE-outtangent-array" count="10">0.2552667 -69.53403 1.110833 -69.53403 1.944167 -69.53403 2.7775 -69.53403 3.666333 -69.53403</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationY.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Box002_rotationY.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationY.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationX.ANGLE-input">
+        <float_array id="node-Box002_rotationX.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationX.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationX.ANGLE-output">
+        <float_array id="node-Box002_rotationX.ANGLE-output-array" count="5">-277.7904 -277.7904 -277.7904 -277.7904 -277.7904</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationX.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationX.ANGLE-intangent">
+        <float_array id="node-Box002_rotationX.ANGLE-intangent-array" count="10">-0.3663333 -277.7904 0.5447333 -277.7904 1.389167 -277.7904 2.2225 -277.7904 3.055833 -277.7904</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationX.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationX.ANGLE-outtangent">
+        <float_array id="node-Box002_rotationX.ANGLE-outtangent-array" count="10">0.2552667 -277.7904 1.110833 -277.7904 1.944167 -277.7904 2.7775 -277.7904 3.666333 -277.7904</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationX.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Box002_rotationX.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_rotationX.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_scale-input">
+        <float_array id="node-Box002_scale-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_scale-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_scale-output">
+        <float_array id="node-Box002_scale-output-array" count="15">0.9999999 1 0.9999999 0.9999999 1 0.9999999 0.9999999 1 0.9999999 0.9999999 1 0.9999999 0.9999999 1 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_scale-output-array" count="5" stride="3">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_scale-intangent">
+        <float_array id="node-Box002_scale-intangent-array" count="30">-0.3663333 0.9999999 -0.3663333 1 -0.3663333 0.9999999 0.5447333 0.9999999 0.5447333 1 0.5447333 0.9999999 1.389167 0.9999999 1.389167 1 1.389167 0.9999999 2.2225 0.9999999 2.2225 1 2.2225 0.9999999 3.055833 0.9999999 3.055833 1 3.055833 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_scale-intangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_scale-outtangent">
+        <float_array id="node-Box002_scale-outtangent-array" count="30">0.2552667 0.9999999 0.2552667 1 0.2552667 0.9999999 1.110833 0.9999999 1.110833 1 1.110833 0.9999999 1.944167 0.9999999 1.944167 1 1.944167 0.9999999 2.7775 0.9999999 2.7775 1 2.7775 0.9999999 3.666333 0.9999999 3.666333 1 3.666333 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_scale-outtangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_scale-interpolation">
+        <Name_array id="node-Box002_scale-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_scale-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_InverseScaleAxisRotation-input">
+        <float_array id="node-Box002_InverseScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_InverseScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_InverseScaleAxisRotation-output">
+        <float_array id="node-Box002_InverseScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_InverseScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_InverseScaleAxisRotation-interpolation">
+        <Name_array id="node-Box002_InverseScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_InverseScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_ScaleAxisRotation-input">
+        <float_array id="node-Box002_ScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_ScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_ScaleAxisRotation-output">
+        <float_array id="node-Box002_ScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box002_ScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box002_ScaleAxisRotation-interpolation">
+        <Name_array id="node-Box002_ScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box002_ScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.X-input">
+        <float_array id="node-Box003_translation.X-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.X-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.X-output">
+        <float_array id="node-Box003_translation.X-output-array" count="5">5.787827 5.787827 5.787827 5.787827 5.787827</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.X-output-array" count="5" stride="1">
+            <param name="X" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.X-intangent">
+        <float_array id="node-Box003_translation.X-intangent-array" count="10">-0.3663333 5.787827 0.5447333 5.787827 1.389167 5.787827 2.2225 5.787827 3.055833 5.787827</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.X-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.X-outtangent">
+        <float_array id="node-Box003_translation.X-outtangent-array" count="10">0.2552667 5.787827 1.110833 5.787827 1.944167 5.787827 2.7775 5.787827 3.666333 5.787827</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.X-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.X-interpolation">
+        <Name_array id="node-Box003_translation.X-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.X-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Y-input">
+        <float_array id="node-Box003_translation.Y-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Y-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Y-output">
+        <float_array id="node-Box003_translation.Y-output-array" count="5">25.48166 25.48166 25.48166 25.48166 25.48166</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Y-output-array" count="5" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Y-intangent">
+        <float_array id="node-Box003_translation.Y-intangent-array" count="10">-0.3663333 25.48166 0.5447333 25.48166 1.389167 25.48166 2.2225 25.48166 3.055833 25.48166</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Y-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Y-outtangent">
+        <float_array id="node-Box003_translation.Y-outtangent-array" count="10">0.2552667 25.48166 1.110833 25.48166 1.944167 25.48166 2.7775 25.48166 3.666333 25.48166</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Y-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Y-interpolation">
+        <Name_array id="node-Box003_translation.Y-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Y-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Z-input">
+        <float_array id="node-Box003_translation.Z-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Z-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Z-output">
+        <float_array id="node-Box003_translation.Z-output-array" count="5">-11.22571 -11.22571 -11.22571 -11.22571 -11.22571</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Z-output-array" count="5" stride="1">
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Z-intangent">
+        <float_array id="node-Box003_translation.Z-intangent-array" count="10">-0.3663333 -11.22571 0.5447333 -11.22571 1.389167 -11.22571 2.2225 -11.22571 3.055833 -11.22571</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Z-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Z-outtangent">
+        <float_array id="node-Box003_translation.Z-outtangent-array" count="10">0.2552667 -11.22571 1.110833 -11.22571 1.944167 -11.22571 2.7775 -11.22571 3.666333 -11.22571</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Z-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_translation.Z-interpolation">
+        <Name_array id="node-Box003_translation.Z-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_translation.Z-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationZ.ANGLE-input">
+        <float_array id="node-Box003_rotationZ.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationZ.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationZ.ANGLE-output">
+        <float_array id="node-Box003_rotationZ.ANGLE-output-array" count="5">83.2487 83.2487 83.2487 83.2487 83.2487</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationZ.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationZ.ANGLE-intangent">
+        <float_array id="node-Box003_rotationZ.ANGLE-intangent-array" count="10">-0.3663333 83.2487 0.5447333 83.2487 1.389167 83.2487 2.2225 83.2487 3.055833 83.2487</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationZ.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationZ.ANGLE-outtangent">
+        <float_array id="node-Box003_rotationZ.ANGLE-outtangent-array" count="10">0.2552667 83.2487 1.110833 83.2487 1.944167 83.2487 2.7775 83.2487 3.666333 83.2487</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationZ.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Box003_rotationZ.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationZ.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationY.ANGLE-input">
+        <float_array id="node-Box003_rotationY.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationY.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationY.ANGLE-output">
+        <float_array id="node-Box003_rotationY.ANGLE-output-array" count="5">-68.02062 -68.02062 -68.02062 -68.02062 -68.02062</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationY.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationY.ANGLE-intangent">
+        <float_array id="node-Box003_rotationY.ANGLE-intangent-array" count="10">-0.3663333 -68.02062 0.5447333 -68.02062 1.389167 -68.02062 2.2225 -68.02062 3.055833 -68.02062</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationY.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationY.ANGLE-outtangent">
+        <float_array id="node-Box003_rotationY.ANGLE-outtangent-array" count="10">0.2552667 -68.02062 1.110833 -68.02062 1.944167 -68.02062 2.7775 -68.02062 3.666333 -68.02062</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationY.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Box003_rotationY.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationY.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationX.ANGLE-input">
+        <float_array id="node-Box003_rotationX.ANGLE-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationX.ANGLE-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationX.ANGLE-output">
+        <float_array id="node-Box003_rotationX.ANGLE-output-array" count="5">277.275 277.275 277.275 277.275 277.275</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationX.ANGLE-output-array" count="5" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationX.ANGLE-intangent">
+        <float_array id="node-Box003_rotationX.ANGLE-intangent-array" count="10">-0.3663333 277.275 0.5447333 277.275 1.389167 277.275 2.2225 277.275 3.055833 277.275</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationX.ANGLE-intangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationX.ANGLE-outtangent">
+        <float_array id="node-Box003_rotationX.ANGLE-outtangent-array" count="10">0.2552667 277.275 1.110833 277.275 1.944167 277.275 2.7775 277.275 3.666333 277.275</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationX.ANGLE-outtangent-array" count="5" stride="2">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Box003_rotationX.ANGLE-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_rotationX.ANGLE-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_scale-input">
+        <float_array id="node-Box003_scale-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_scale-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_scale-output">
+        <float_array id="node-Box003_scale-output-array" count="15">0.9999999 0.9999998 0.9999999 0.9999999 0.9999998 0.9999999 0.9999999 0.9999998 0.9999999 0.9999999 0.9999998 0.9999999 0.9999999 0.9999998 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_scale-output-array" count="5" stride="3">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_scale-intangent">
+        <float_array id="node-Box003_scale-intangent-array" count="30">-0.3663333 0.9999999 -0.3663333 0.9999998 -0.3663333 0.9999999 0.5447333 0.9999999 0.5447333 0.9999998 0.5447333 0.9999999 1.389167 0.9999999 1.389167 0.9999998 1.389167 0.9999999 2.2225 0.9999999 2.2225 0.9999998 2.2225 0.9999999 3.055833 0.9999999 3.055833 0.9999998 3.055833 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_scale-intangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_scale-outtangent">
+        <float_array id="node-Box003_scale-outtangent-array" count="30">0.2552667 0.9999999 0.2552667 0.9999998 0.2552667 0.9999999 1.110833 0.9999999 1.110833 0.9999998 1.110833 0.9999999 1.944167 0.9999999 1.944167 0.9999998 1.944167 0.9999999 2.7775 0.9999999 2.7775 0.9999998 2.7775 0.9999999 3.666333 0.9999999 3.666333 0.9999998 3.666333 0.9999999</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_scale-outtangent-array" count="5" stride="6">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_scale-interpolation">
+        <Name_array id="node-Box003_scale-interpolation-array" count="5">BEZIER BEZIER BEZIER BEZIER BEZIER</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_scale-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_InverseScaleAxisRotation-input">
+        <float_array id="node-Box003_InverseScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_InverseScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_InverseScaleAxisRotation-output">
+        <float_array id="node-Box003_InverseScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_InverseScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_InverseScaleAxisRotation-interpolation">
+        <Name_array id="node-Box003_InverseScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_InverseScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_ScaleAxisRotation-input">
+        <float_array id="node-Box003_ScaleAxisRotation-input-array" count="5">-0.03333334 0.8333334 1.666667 2.5 3.333333</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_ScaleAxisRotation-input-array" count="5" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_ScaleAxisRotation-output">
+        <float_array id="node-Box003_ScaleAxisRotation-output-array" count="20">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+        <technique_common>
+          <accessor source="#node-Box003_ScaleAxisRotation-output-array" count="5" stride="4">
+            <param name="X" type="float"/>
+            <param name="Y" type="float"/>
+            <param name="Z" type="float"/>
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Box003_ScaleAxisRotation-interpolation">
+        <Name_array id="node-Box003_ScaleAxisRotation-interpolation-array" count="5">LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Box003_ScaleAxisRotation-interpolation-array" count="5" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="node-Arrow_translation.X-sampler">
+        <input semantic="INPUT" source="#node-Arrow_translation.X-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_translation.X-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_translation.X-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_translation.X-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_translation.X-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Arrow_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_translation.Y-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_translation.Y-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_translation.Y-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_translation.Z-sampler">
+        <input semantic="INPUT" source="#node-Arrow_translation.Z-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_translation.Z-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_translation.Z-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_translation.Z-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_translation.Z-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Arrow_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_rotationZ.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_rotationZ.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_rotationZ.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Arrow_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_rotationY.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_rotationY.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_rotationY.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Arrow_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_rotationX.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_rotationX.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_rotationX.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_scale-sampler">
+        <input semantic="INPUT" source="#node-Arrow_scale-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_scale-output"/>
+        <input semantic="IN_TANGENT" source="#node-Arrow_scale-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Arrow_scale-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_scale-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_InverseScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Arrow_InverseScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_InverseScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_InverseScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Arrow_ScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Arrow_ScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Arrow_ScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Arrow_ScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_translation.X-sampler">
+        <input semantic="INPUT" source="#node-Box001_translation.X-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_translation.X-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_translation.X-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_translation.X-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_translation.X-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Box001_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_translation.Y-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_translation.Y-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_translation.Y-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_translation.Z-sampler">
+        <input semantic="INPUT" source="#node-Box001_translation.Z-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_translation.Z-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_translation.Z-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_translation.Z-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_translation.Z-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box001_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_rotationZ.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_rotationZ.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_rotationZ.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box001_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_rotationY.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_rotationY.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_rotationY.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box001_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_rotationX.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_rotationX.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_rotationX.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_scale-sampler">
+        <input semantic="INPUT" source="#node-Box001_scale-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_scale-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box001_scale-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box001_scale-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_scale-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_InverseScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box001_InverseScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_InverseScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_InverseScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box001_ScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box001_ScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box001_ScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box001_ScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_translation.X-sampler">
+        <input semantic="INPUT" source="#node-Box002_translation.X-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_translation.X-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_translation.X-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_translation.X-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_translation.X-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Box002_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_translation.Y-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_translation.Y-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_translation.Y-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_translation.Z-sampler">
+        <input semantic="INPUT" source="#node-Box002_translation.Z-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_translation.Z-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_translation.Z-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_translation.Z-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_translation.Z-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box002_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_rotationZ.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_rotationZ.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_rotationZ.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box002_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_rotationY.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_rotationY.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_rotationY.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box002_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_rotationX.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_rotationX.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_rotationX.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_scale-sampler">
+        <input semantic="INPUT" source="#node-Box002_scale-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_scale-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box002_scale-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box002_scale-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_scale-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_InverseScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box002_InverseScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_InverseScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_InverseScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box002_ScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box002_ScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box002_ScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box002_ScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_translation.X-sampler">
+        <input semantic="INPUT" source="#node-Box003_translation.X-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_translation.X-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_translation.X-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_translation.X-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_translation.X-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Box003_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_translation.Y-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_translation.Y-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_translation.Y-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_translation.Z-sampler">
+        <input semantic="INPUT" source="#node-Box003_translation.Z-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_translation.Z-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_translation.Z-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_translation.Z-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_translation.Z-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box003_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_rotationZ.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_rotationZ.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_rotationZ.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box003_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_rotationY.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_rotationY.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_rotationY.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Box003_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_rotationX.ANGLE-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_rotationX.ANGLE-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_rotationX.ANGLE-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_scale-sampler">
+        <input semantic="INPUT" source="#node-Box003_scale-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_scale-output"/>
+        <input semantic="IN_TANGENT" source="#node-Box003_scale-intangent"/>
+        <input semantic="OUT_TANGENT" source="#node-Box003_scale-outtangent"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_scale-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_InverseScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box003_InverseScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_InverseScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_InverseScaleAxisRotation-interpolation"/>
+      </sampler>
+      <sampler id="node-Box003_ScaleAxisRotation-sampler">
+        <input semantic="INPUT" source="#node-Box003_ScaleAxisRotation-input"/>
+        <input semantic="OUTPUT" source="#node-Box003_ScaleAxisRotation-output"/>
+        <input semantic="INTERPOLATION" source="#node-Box003_ScaleAxisRotation-interpolation"/>
+      </sampler>
+      <channel source="#node-Arrow_translation.X-sampler" target="node-Arrow/translation.X"/>
+      <channel source="#node-Arrow_translation.Y-sampler" target="node-Arrow/translation.Y"/>
+      <channel source="#node-Arrow_translation.Z-sampler" target="node-Arrow/translation.Z"/>
+      <channel source="#node-Arrow_rotationZ.ANGLE-sampler" target="node-Arrow/rotationZ.ANGLE"/>
+      <channel source="#node-Arrow_rotationY.ANGLE-sampler" target="node-Arrow/rotationY.ANGLE"/>
+      <channel source="#node-Arrow_rotationX.ANGLE-sampler" target="node-Arrow/rotationX.ANGLE"/>
+      <channel source="#node-Arrow_scale-sampler" target="node-Arrow/scale"/>
+      <channel source="#node-Arrow_InverseScaleAxisRotation-sampler" target="node-Arrow/InverseScaleAxisRotation"/>
+      <channel source="#node-Arrow_ScaleAxisRotation-sampler" target="node-Arrow/ScaleAxisRotation"/>
+      <channel source="#node-Box001_translation.X-sampler" target="node-Box001/translation.X"/>
+      <channel source="#node-Box001_translation.Y-sampler" target="node-Box001/translation.Y"/>
+      <channel source="#node-Box001_translation.Z-sampler" target="node-Box001/translation.Z"/>
+      <channel source="#node-Box001_rotationZ.ANGLE-sampler" target="node-Box001/rotationZ.ANGLE"/>
+      <channel source="#node-Box001_rotationY.ANGLE-sampler" target="node-Box001/rotationY.ANGLE"/>
+      <channel source="#node-Box001_rotationX.ANGLE-sampler" target="node-Box001/rotationX.ANGLE"/>
+      <channel source="#node-Box001_scale-sampler" target="node-Box001/scale"/>
+      <channel source="#node-Box001_InverseScaleAxisRotation-sampler" target="node-Box001/InverseScaleAxisRotation"/>
+      <channel source="#node-Box001_ScaleAxisRotation-sampler" target="node-Box001/ScaleAxisRotation"/>
+      <channel source="#node-Box002_translation.X-sampler" target="node-Box002/translation.X"/>
+      <channel source="#node-Box002_translation.Y-sampler" target="node-Box002/translation.Y"/>
+      <channel source="#node-Box002_translation.Z-sampler" target="node-Box002/translation.Z"/>
+      <channel source="#node-Box002_rotationZ.ANGLE-sampler" target="node-Box002/rotationZ.ANGLE"/>
+      <channel source="#node-Box002_rotationY.ANGLE-sampler" target="node-Box002/rotationY.ANGLE"/>
+      <channel source="#node-Box002_rotationX.ANGLE-sampler" target="node-Box002/rotationX.ANGLE"/>
+      <channel source="#node-Box002_scale-sampler" target="node-Box002/scale"/>
+      <channel source="#node-Box002_InverseScaleAxisRotation-sampler" target="node-Box002/InverseScaleAxisRotation"/>
+      <channel source="#node-Box002_ScaleAxisRotation-sampler" target="node-Box002/ScaleAxisRotation"/>
+      <channel source="#node-Box003_translation.X-sampler" target="node-Box003/translation.X"/>
+      <channel source="#node-Box003_translation.Y-sampler" target="node-Box003/translation.Y"/>
+      <channel source="#node-Box003_translation.Z-sampler" target="node-Box003/translation.Z"/>
+      <channel source="#node-Box003_rotationZ.ANGLE-sampler" target="node-Box003/rotationZ.ANGLE"/>
+      <channel source="#node-Box003_rotationY.ANGLE-sampler" target="node-Box003/rotationY.ANGLE"/>
+      <channel source="#node-Box003_rotationX.ANGLE-sampler" target="node-Box003/rotationX.ANGLE"/>
+      <channel source="#node-Box003_scale-sampler" target="node-Box003/scale"/>
+      <channel source="#node-Box003_InverseScaleAxisRotation-sampler" target="node-Box003/InverseScaleAxisRotation"/>
+      <channel source="#node-Box003_ScaleAxisRotation-sampler" target="node-Box003/ScaleAxisRotation"/>
+    </animation>
+  </library_animations>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
