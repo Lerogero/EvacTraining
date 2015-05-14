@@ -27,8 +27,8 @@ var keyboard = new THREEx .KeyboardState();
 var keyboard;
 
 var raycaster;
-var raycasterF;
-var raycasterB;
+var raycasterFront;
+var raycasterBack;
 
 var objects = [];
 
@@ -39,16 +39,15 @@ var myColladaLoader;
 var terrain;
 var arrow;
 var arrowTwo;
-
-var arrowAnimations;
-var keyFrameAnimations = [];
-var keyFrameAnimationsLength = 0;
-var lastFrameCurrentTime = [];
+var arrowThree;
+var arrowFour;
+var arrowFive;
+var arrowSix;
 
 var skyBoxMesh;
 var texture_placeholder;
 
-var score = 0;
+
 
 function init() {
 
@@ -81,8 +80,9 @@ function init() {
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT_RATIO, NEAR_CLIPPING_PLANE, FAR_CLIPPING_PLANE);
 
   scene.add(camera);
-  camera.position.set(-4,0,30);
+  camera.position.set(200,0,225);
   camera.lookAt(scene.position);
+  camera.rotation.y = 90 * Math.PI / 180;
 
   raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0 ,-1, 0), 0, 10);
 
@@ -117,7 +117,7 @@ skyBoxMesh.scale.x = - 1;
 scene.add(skyBoxMesh);
 
   // Add light
-  var light = new THREE.DirectionalLight( 0xffffff, 1.5, 1.5  );
+  var light = new THREE.DirectionalLight( 0xffffff, 1.5 ,1.5 );
   light.position.set( 1, 1, 1 );
   scene.add( light );
 
@@ -133,29 +133,11 @@ scene.add(skyBoxMesh);
 			// Here we store the dae in a global variable.
 			arrow = collada.scene;
 
-      arrowAnimations = collada.animations;
-
-      keyFrameAnimationsLength = arrowAnimations.length;
-
-      for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-        lastFrameCurrentTime[i];
-      }
-
-      for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-        var animation = arrowAnimations[ i ];
-
-        var keyFrameAnimation = new THREE.KeyFrameAnimation( animation );
-        keyFrameAnimation.timeScale = 1;
-        keyFrameAnimation.loop = false;
-
-        keyFrameAnimations.push( keyFrameAnimation );
-      }
-
 			// Position your model in the scene (world space).objects
-      arrow.position.set(-5,-2.5,20);
-      arrow.rotation.y = 4.6;
+      arrow.position.set(170,-4.5,225);
+      arrow.rotation.y = 90 * Math.PI / 180;
 			// Scale your model to the correct size.
-      arrow.scale.x = arrow.scale.y = arrow.scale.z = 0.1;
+      arrow.scale.x = arrow.scale.y = arrow.scale.z = 0.3;
       arrow.updateMatrix();
 
 			// Add the model to the scene.
@@ -171,29 +153,11 @@ scene.add(skyBoxMesh);
         // Here we store the dae in a global variable.
         arrowTwo = collada.scene;
 
-        arrowTwoAnimations = collada.animations;
-
-        keyFrameAnimationsLength = arrowTwoAnimations.length;
-
-        for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-          lastFrameCurrentTime[i];
-        }
-
-        for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-          var animation = arrowTwoAnimations[ i ];
-
-          var keyFrameAnimation = new THREE.KeyFrameAnimation( animation );
-          keyFrameAnimation.timeScale = 1;
-          keyFrameAnimation.loop = false;
-
-          keyFrameAnimations.push( keyFrameAnimation );
-        }
-
         // Position your model in the scene (world space).objects
-        arrowTwo.position.set(-10,-2.5,20);
-        arrowTwo.rotation.y = 4.6;
+        arrowTwo.position.set(0,-4.5,225);
+        arrowTwo.rotation.y = 0 * Math.PI / 180;
         // Scale your model to the correct size.
-        arrowTwo.scale.x = arrowTwo.scale.y = arrowTwo.scale.z = 0.1;
+        arrowTwo.scale.x = arrowTwo.scale.y = arrowTwo.scale.z = 0.3;
         arrowTwo.updateMatrix();
 
         // Add the model to the scene.
@@ -204,8 +168,84 @@ scene.add(skyBoxMesh);
 
       } );
 
+      myColladaLoader.load( 'arrow.DAE', function ( collada ) {
+          // Here we store the dae in a global variable.
+          arrowThree = collada.scene;
+
+          // Position your model in the scene (world space).objects
+          arrowThree.position.set(0,-4.5,40);
+          arrowThree.rotation.y = 270 * Math.PI / 180;
+          // Scale your model to the correct size.
+          arrowThree.scale.x = arrowThree.scale.y = arrowThree.scale.z = 0.3;
+          arrowThree.updateMatrix();
+
+          // Add the model to the scene.
+
+          arrowThree.name = "arrowThree";
+          scene.add(arrowThree);
+          objects.push(arrowThree);
+
+        } );
+
+        myColladaLoader.load( 'arrow.DAE', function ( collada ) {
+            // Here we store the dae in a global variable.
+            arrowFour = collada.scene;
+
+            // Position your model in the scene (world space).objects
+            arrowFour.position.set(120,-4.5,40);
+            arrowFour.rotation.y = 270 * Math.PI / 180;
+            // Scale your model to the correct size.
+            arrowFour.scale.x = arrowFour.scale.y = arrowFour.scale.z = 0.3;
+            arrowFour.updateMatrix();
+
+            // Add the model to the scene.
+
+            arrowFour.name = "arrowFour";
+            scene.add(arrowFour);
+            objects.push(arrowFour);
+
+          } );
+
+          myColladaLoader.load( 'arrow.DAE', function ( collada ) {
+              // Here we store the dae in a global variable.
+              arrowFive = collada.scene;
+
+              // Position your model in the scene (world space).objects
+              arrowFive.position.set(260,-4.5,40);
+              arrowFive.rotation.y = 0 * Math.PI / 180;
+              // Scale your model to the correct size.
+              arrowFive.scale.x = arrowFive.scale.y = arrowFive.scale.z = 0.3;
+              arrowFive.updateMatrix();
+
+              // Add the model to the scene.
+
+              arrowFive.name = "arrowFive";
+              scene.add(arrowFive);
+              objects.push(arrowFive);
+
+            } );
+
+            myColladaLoader.load( 'arrow.DAE', function ( collada ) {
+                // Here we store the dae in a global variable.
+                arrowSix = collada.scene;
+
+                // Position your model in the scene (world space).objects
+                arrowSix.position.set(260,-4.5,-60);
+                arrowSix.rotation.y = 90 * Math.PI / 180;
+                // Scale your model to the correct size.
+                arrowSix.scale.x = arrowSix.scale.y = arrowSix.scale.z = 0.3;
+                arrowSix.updateMatrix();
+
+                // Add the model to the scene.
+
+                arrowSix.name = "arrowSix";
+                scene.add(arrowSix);
+                objects.push(arrowSix);
+
+              } );
+
     // Import terrain model
-    myColladaLoader.load( 'grant.DAE', function ( collada ) {
+    myColladaLoader.load( 'room.DAE', function ( collada ) {
         // Here we store the dae in a global variable.
         terrain = collada.scene;
 
@@ -215,7 +255,7 @@ scene.add(skyBoxMesh);
         terrain.position.z = 0;
 
         // Scale your model to the correct size.
-        terrain.scale.x = terrain.scale.y = terrain.scale.z = 1;
+        terrain.scale.x = terrain.scale.y = terrain.scale.z = 0.5;
         terrain.updateMatrix();
 
         // Add the model to the scene.
@@ -223,38 +263,13 @@ scene.add(skyBoxMesh);
         scene.add(terrain);
         objects.push(terrain);
 
-        startAnimations();
       } );
 
-}
-
-// Start the animations
-function startAnimations() {
-  for ( var i = 0; i < keyFrameAnimationsLength; i++)  {
-    var animation = keyFrameAnimations[i];
-    animation.play();
-  }
-}
-
-// Loop through the animations when animations finished
-function loopAnimations() {
-  for ( var i = 0; i < keyFrameAnimationsLength; i ++ ) {
-    if(keyFrameAnimations[i].isPlaying && !keyFrameAnimations[i].isPaused) {
-      if(keyFrameAnimations[i].currentTime == lastFrameCurrentTime[i]) {
-        keyFrameAnimations[i].stop();
-        keyFrameAnimations[i].play();
-        lastFrameCurrentTime[i] = 0;
-      }
-    }
-  }
 }
 
 function render() {
 
   var deltaTime = clock.getDelta();
-
-  THREE.AnimationHandler.update( deltaTime );
-  loopAnimations();
 
   var tmpY = camera.position.y;
 
@@ -268,10 +283,10 @@ function render() {
   directionB = directionB.applyMatrix4(matrix);
 
   // Raycaster in direction of front and back of camera
-  raycasterFC = new THREE.Raycaster( camera.position,direction,0,2);
-  var intersectionsF = raycasterFC.intersectObjects( objects, true);
-  raycasterBC = new THREE.Raycaster( camera.position, directionB,0,2);
-  var intersectionsB = raycasterBC.intersectObjects( objects, true);
+  raycasterFrontC = new THREE.Raycaster( camera.position,direction,0,2);
+  var intersectionsFront = raycasterFrontC.intersectObjects( objects, true);
+  raycasterBackC = new THREE.Raycaster( camera.position, directionB,0,2);
+  var intersectionsBack = raycasterBackC.intersectObjects( objects, true);
 
   camera.position.y = tmpY;
 
@@ -286,8 +301,8 @@ function render() {
 
   //Debugger
   document.getElementById("debugInfo").innerHTML =  "Gravity = " + intersections.length +
-    "<br>" +"Forward Collision = " + intersectionsF.length +
-    "<br>" + "Back Collision = " + intersectionsB.length;
+    "<br>" +"Front Collision = " + intersectionsFront.length +
+    "<br>" + "Back Collision = " + intersectionsBack.length;
 
     if ( intersections.length > 0) {
       if(camera.position.y < tmpY) {
@@ -299,76 +314,22 @@ function render() {
     var rotateAngle = Math.PI / 2 * deltaTime;
     var rotation_matrix = new THREE.Matrix4().identity();
 
-    // Check intersections with arrow, then move.
-    if(intersectionsF.length > 0) {
-      if( intersectionsF[0].object.parent.id == "node-Torus001") {
-
-        // Switch to move the arrow around depnding on score
-        switch (score){
-          case 0:
-          arrow.position.set(-15, -2, 4); //sets the position of the arrow after  a hit
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 10:
-          arrow.position.set(-24.5,-2 ,70);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 20:
-		  arrow.position.set(-45,-2 ,20);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 30:
-		    arrow.position.set(20,-2, -17);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 40:
-		  arrow.position.set(23,-2, 7);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 50:
-		  arrow.position.set(45,-2, 15);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 60:
-		    arrow.position.set(20,-2, 35);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 70:
-		  arrow.position.set(40,-2, 51);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 80:
-		  arrow.position.set(0,-2, 73);
-            score = score + 10;
-            document.getElementById("score").innerHTML = "Score: " + score;
-            break;
-          case 90:
-			score = score + 10;
-			document.getElementById("score").innerHTML = "Score: " + score;
-            alert("You Win! Press CTRL + R to play again!");
-            break;
-        }
+    if(intersectionsFront.length > 0) {
+      if( intersectionsFront[0].object.parent.id == "node-Exit") {
+        document.getElementById("info").innerHTML = "You Evacuated Successfully!";
       }
     }
 
     // Movement controls
     if( keyboard.pressed("W")) {
-      if(intersectionsF.length > 0 ) {
+      if(intersectionsFront.length > 0 ) {
         moveDistance = 0;
       } else {
       camera.translateZ( -moveDistance );
     }
   }
     if ( keyboard.pressed("S") ) {
-      if (intersectionsB.length > 0) {
+      if (intersectionsBack.length > 0) {
         moveDistance = 0;
       } else {
       camera.translateZ(  moveDistance );
@@ -387,10 +348,6 @@ function render() {
 
   requestAnimationFrame(render);
 
-  // Check for animation loop
-  for ( var i = 0; i < keyFrameAnimationsLength; i++ ) {
-    lastFrameCurrentTime[i] = keyFrameAnimations[i].currentTime;
-  }
 }
 
 // Load the skybox textures
